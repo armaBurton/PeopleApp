@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "PacktLibraryNetStandard2/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/PacktLibraryNetStandard2.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PacktLibraryNetStandard2.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PacktLibraryNetStandard2/1.0.0": {
+      "type": "project",
+      "path": "../classlib/PacktLibraryNetStandard2/PacktLibraryNetStandard2.csproj",
+      "msbuildProject": "../classlib/PacktLibraryNetStandard2/PacktLibraryNetStandard2.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "PacktLibraryNetStandard2 >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\arman\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\001 work\\projects\\c#\\cs11dotnet7\\Chapter05\\classlib\\PacktLibraryNetStandard2\\PacktLibraryNetStandard2.csproj": {
+              "projectPath": "D:\\001 work\\projects\\c#\\cs11dotnet7\\Chapter05\\classlib\\PacktLibraryNetStandard2\\PacktLibraryNetStandard2.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
