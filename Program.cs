@@ -79,3 +79,12 @@ WriteLine(
   arg1: blankPerson.HomePlanet,
   arg2: blankPerson.Instantiated
 );
+
+Person gunny = new(initialName: "Gunny", homePlanet: "Mars");
+
+WriteLine(
+  format: "\n{0} of {1} was created at {2:hh:mm:ss} on {2:dddd}",
+  arg0: gunny.Name,
+  arg1: gunny.HomePlanet,
+  arg2: gunny.Instantiated
+);
