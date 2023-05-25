@@ -45,6 +45,7 @@ for (int childIndex = 0; childIndex < bob.Children.Count; childIndex++){
 }
 WriteLine($"");
 WriteLine($"{bob.Name} is a {Person.Species}");
+WriteLine($"{bob.Name} was born on {bob.HomePlanet}");
 WriteLine($"");
 BankAccount.InterestRate = 0.012M;
 
@@ -68,4 +69,13 @@ WriteLine(
   format: "{0} earned {1:C} interest.",
   arg0: gerrierAccount.AccountName,
   arg1: gerrierAccount.Balance * BankAccount.InterestRate
+);
+
+Person blankPerson = new();
+
+WriteLine(
+  format: "\n{0} of {1} was created at {2:hh:mm:ss} on a {2:dddd}",
+  arg0: blankPerson.Name,
+  arg1: blankPerson.HomePlanet,
+  arg2: blankPerson.Instantiated
 );
