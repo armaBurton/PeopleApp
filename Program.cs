@@ -121,4 +121,12 @@ WriteLine(
   arg2: gunny.Instantiated
 );
 
+int a = 10;
+int b = 20;
+int c = 30;
+
+WriteLine($"Before: a = {a}, b = {b}, c = {c}");
+bob.PassingParameters(a, ref b, out c);
+WriteLine($"After: a = {a}, b = {b}, c = {c}");
+
 
