@@ -63,6 +63,12 @@ WriteLine($"{thing1.Item1} has {thing1.Item2} children.");
 var thing2 = (bob.Name, bob.Children.Count);
 WriteLine($"{thing2.Name} has {thing2.Count} children.");
 
+var (name1, dob1) = bob;
+WriteLine($"Deconstructed: {name1}, {dob1}");
+
+var (name2, dob2, fav2) = bob;
+WriteLine($"Deconstructed: {name2}, {dob2}, {fav2}");
+
 WriteLine($"");
 
 BankAccount.InterestRate = 0.012M;
