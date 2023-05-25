@@ -4,7 +4,9 @@ Person bob = new()
 {
   Name = "Bob Smith",
   DateOfBirth = new DateTime(1965, 12, 22),
-  FavoriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia
+  FavoriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia,
+  BucketList = WondersOfTheAncientWorld.HangingGardensOfBabylon
+  | WondersOfTheAncientWorld.MausoleumAtHalicarnassus
 };
 
 Person alice = new(){
@@ -28,3 +30,5 @@ WriteLine("{0} was born on {1:dd MMM yy}",
   arg0: alice.Name,
   arg1: alice.DateOfBirth
 );
+
+WriteLine($"{bob.Name}'s bucket list is {bob.BucketList}");
