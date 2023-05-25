@@ -46,7 +46,14 @@ for (int childIndex = 0; childIndex < bob.Children.Count; childIndex++){
 WriteLine($"");
 WriteLine($"{bob.Name} is a {Person.Species}");
 WriteLine($"{bob.Name} was born on {bob.HomePlanet}");
+bob.WriteToConsole();
+WriteLine(bob.GetOrigin());
+(string, int) fruit = bob.GetFruit();
+WriteLine($"{fruit.Item1}, {fruit.Item2} there are.");
+
 WriteLine($"");
+
+
 BankAccount.InterestRate = 0.012M;
 
 BankAccount jonesAccount = new()
@@ -88,3 +95,5 @@ WriteLine(
   arg1: gunny.HomePlanet,
   arg2: gunny.Instantiated
 );
+
+
