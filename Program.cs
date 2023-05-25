@@ -1,4 +1,5 @@
 ﻿using Packt.Shared;
+Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("en-GB");
 
 Person bob = new()
 {
@@ -42,3 +43,27 @@ WriteLine($"{bob.Name} has {bob.Children.Count} children");
 for (int childIndex = 0; childIndex < bob.Children.Count; childIndex++){
   WriteLine($"> {bob.Children[childIndex].Name}");
 }
+
+BankAccount.InterestRate = 0.012M;
+
+BankAccount jonesAccount = new()
+{
+  AccountName = "Mrs. Jones",
+  Balance = 2400
+};
+WriteLine(
+  format: "{0} earned {1:C} interest.",
+  arg0: jonesAccount.AccountName,
+  arg1: jonesAccount.Balance * BankAccount.InterestRate
+);
+
+BankAccount gerrierAccount = new()
+{
+  AccountName = "Ms. Gerrier",
+  Balance = 98
+};
+WriteLine(
+  format: "{0} earned {1:C} interest.",
+  arg0: gerrierAccount.AccountName,
+  arg1: gerrierAccount.Balance * BankAccount.InterestRate
+);
