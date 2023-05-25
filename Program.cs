@@ -9,6 +9,10 @@ Person bob = new()
   | WondersOfTheAncientWorld.MausoleumAtHalicarnassus
 };
 
+bob.Children.Add(new() { Name = "Alfred" });
+bob.Children.Add(new() { Name = "Zoe" });
+
+
 Person alice = new(){
   Name = "Alice Jones",
   DateOfBirth = new(1998, 3, 7)
@@ -32,3 +36,9 @@ WriteLine("{0} was born on {1:dd MMM yy}",
 );
 
 WriteLine($"{bob.Name}'s bucket list is {bob.BucketList}");
+WriteLine($"");
+WriteLine($"{bob.Name} has {bob.Children.Count} children");
+
+for (int childIndex = 0; childIndex < bob.Children.Count; childIndex++){
+  WriteLine($"> {bob.Children[childIndex].Name}");
+}
