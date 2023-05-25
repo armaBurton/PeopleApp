@@ -43,7 +43,9 @@ WriteLine($"{bob.Name} has {bob.Children.Count} children");
 for (int childIndex = 0; childIndex < bob.Children.Count; childIndex++){
   WriteLine($"> {bob.Children[childIndex].Name}");
 }
-
+WriteLine($"");
+WriteLine($"{bob.Name} is a {Person.Species}");
+WriteLine($"");
 BankAccount.InterestRate = 0.012M;
 
 BankAccount jonesAccount = new()
