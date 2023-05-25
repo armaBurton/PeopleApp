@@ -134,6 +134,8 @@ WriteLine($"Before: d = {d}, e = {e}, f doesn't exist yet.");
 bob.PassingParameters(d, ref e, out int f);
 WriteLine($"After: d = {d}, e = {e}, f = {f}.");
 
+WriteLine($"");
+
 Person sam = new(){
   Name = "Sam",
   DateOfBirth = new(1969, 6, 25)
@@ -142,3 +144,17 @@ Person sam = new(){
 WriteLine(sam.Origin);
 WriteLine(sam.Greeting);
 WriteLine(sam.Age);
+
+sam.FavoriteIceCream = "Chocolate Fudge";
+WriteLine($"{sam.Name}'s favorite ice-cream flavor is {sam.FavoriteIceCream}");
+
+string color = "black";
+try{
+  sam.FavoritePrimaryColor = color;
+  WriteLine($"{sam.Name}'s favorite primary color is {sam.FavoritePrimaryColor}");
+} catch (Exception ex) {
+  WriteLine(
+    "Tried to set {0} to '{1}': {2}",
+    nameof(sam.FavoritePrimaryColor), color, ex.Message
+  );
+}
