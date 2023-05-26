@@ -16,3 +16,5 @@ D:\001 work\projects\c#\cs11dotnet7\Chapter05\PeopleApp\obj\Debug\net7.0\refint\
 D:\001 work\projects\c#\cs11dotnet7\Chapter05\PeopleApp\obj\Debug\net7.0\PeopleApp.pdb
 D:\001 work\projects\c#\cs11dotnet7\Chapter05\PeopleApp\obj\Debug\net7.0\PeopleApp.genruntimeconfig.cache
 D:\001 work\projects\c#\cs11dotnet7\Chapter05\PeopleApp\obj\Debug\net7.0\ref\PeopleApp.dll
+D:\001 work\projects\c#\cs11dotnet7\Chapter05\PeopleApp\bin\Debug\net7.0\PacktLibraryModern.dll
+D:\001 work\projects\c#\cs11dotnet7\Chapter05\PeopleApp\bin\Debug\net7.0\PacktLibraryModern.pdb
