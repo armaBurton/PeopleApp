@@ -158,3 +158,5 @@ try{
     nameof(sam.FavoritePrimaryColor), color, ex.Message
   );
 }
+
+Book book = new();

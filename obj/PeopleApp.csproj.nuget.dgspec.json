@@ -4,6 +4,61 @@
     "D:\\001 work\\projects\\c#\\cs11dotnet7\\Chapter05\\PeopleApp\\PeopleApp.csproj": {}
   },
   "projects": {
+    "D:\\001 work\\projects\\c#\\cs11dotnet7\\Chapter05\\classlib\\PacktLibraryModern\\PacktLibraryModern.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\001 work\\projects\\c#\\cs11dotnet7\\Chapter05\\classlib\\PacktLibraryModern\\PacktLibraryModern.csproj",
+        "projectName": "PacktLibraryModern",
+        "projectPath": "D:\\001 work\\projects\\c#\\cs11dotnet7\\Chapter05\\classlib\\PacktLibraryModern\\PacktLibraryModern.csproj",
+        "packagesPath": "C:\\Users\\arman\\.nuget\\packages\\",
+        "outputPath": "D:\\001 work\\projects\\c#\\cs11dotnet7\\Chapter05\\classlib\\PacktLibraryModern\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\arman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\001 work\\projects\\c#\\cs11dotnet7\\Chapter05\\classlib\\PacktLibraryNetStandard2\\PacktLibraryNetStandard2.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -86,6 +141,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "D:\\001 work\\projects\\c#\\cs11dotnet7\\Chapter05\\classlib\\PacktLibraryModern\\PacktLibraryModern.csproj": {
+                "projectPath": "D:\\001 work\\projects\\c#\\cs11dotnet7\\Chapter05\\classlib\\PacktLibraryModern\\PacktLibraryModern.csproj"
+              },
               "D:\\001 work\\projects\\c#\\cs11dotnet7\\Chapter05\\classlib\\PacktLibraryNetStandard2\\PacktLibraryNetStandard2.csproj": {
                 "projectPath": "D:\\001 work\\projects\\c#\\cs11dotnet7\\Chapter05\\classlib\\PacktLibraryNetStandard2\\PacktLibraryNetStandard2.csproj"
               }

@@ -11,6 +11,9 @@
     <ProjectReference Include="../classlib/PacktLibraryNetStandard2/PacktLibraryNetStandard2.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="../classlib/PacktLibraryModern/PacktLibraryModern.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <Using Include="System.Console" static="true" />
   </ItemGroup>
 
