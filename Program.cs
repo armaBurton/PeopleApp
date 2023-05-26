@@ -159,9 +159,16 @@ try{
   );
 }
 
-Book book = new(){
-  Isbn = "978-1803237800",
-  Title = "C# 11 and .NET 7 - Modern Cross-Platform Development Fundamentals"
+// Book book = new(){
+//   Isbn = "978-1803237800",
+//   Title = "C# 11 and .NET 7 - Modern Cross-Platform Development Fundamentals"
+// };
+
+WriteLine($"");
+
+Book book = new(isbn: "978-1803237800", title: "C# 11 and .NET 7 - Modern Cross-Platform Development Fundamentals"){
+  Author = "Mark J. Price",
+  PageCount = 821
 };
 
 WriteLine(
