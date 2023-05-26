@@ -148,7 +148,7 @@ WriteLine(sam.Age);
 sam.FavoriteIceCream = "Chocolate Fudge";
 WriteLine($"{sam.Name}'s favorite ice-cream flavor is {sam.FavoriteIceCream}");
 
-string color = "black";
+string color = "red";
 try{
   sam.FavoritePrimaryColor = color;
   WriteLine($"{sam.Name}'s favorite primary color is {sam.FavoritePrimaryColor}");
@@ -158,6 +158,16 @@ try{
     nameof(sam.FavoritePrimaryColor), color, ex.Message
   );
 }
+
+sam.Children.Add(new() { Name = "Charlie", DateOfBirth = new(2010, 3, 18)});
+sam.Children.Add(new() { Name = "Ella", DateOfBirth = new(2020, 12, 24)});
+
+WriteLine($"Sam's first child is {sam.Children[0].Name}.");
+WriteLine($"Sam's second child is {sam.Children[1].Name}.");
+WriteLine($"Sam's first child is {sam[0].Name}.");
+WriteLine($"Sam's second child is {sam[1].Name}.");
+
+WriteLine($"Sam's child name {sam[1].Name} is {sam["Ella"].Age}");
 
 // Book book = new(){
 //   Isbn = "978-1803237800",
