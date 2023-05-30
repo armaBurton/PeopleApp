@@ -247,9 +247,14 @@ Passenger[] passengers = {
 
 foreach(Passenger passenger in passengers){
   decimal flightCost = passenger switch{
-    FirstClassPassenger p when p.AirMiles > 3500  => 1500M,
-    FirstClassPassenger p when p.AirMiles > 1500  => 1750M,
-    FirstClassPassenger _                         => 2000M,
+    // FirstClassPassenger p when p.AirMiles > 3500  => 1500M,  C# 8 syntax
+    // FirstClassPassenger p when p.AirMiles > 1500  => 1750M,
+    // FirstClassPassenger _                         => 2000M,
+    FirstClassPassenger p => p.AirMiles switch {
+      > 35000 => 1500M,
+      > 15000 => 1750M,
+      _       => 2000M
+    },
     BusinessClassPassenger _                      => 1000M,
     CoachClassPassenger p when p.CarryOnKg < 10.0 => 500M,
     CoachClassPassenger _                         => 650M,
