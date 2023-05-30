@@ -1,5 +1,5 @@
 ﻿using Packt.Shared;
-Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("en-GB");
+// Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("en-GB");
 
 Person bob = new()
 {
@@ -227,10 +227,33 @@ for (int i = 0; i < lamech.Children.Count; i++){
 }
 
 
-int number = 5;
+int number = -5;
 
 try{
   Write($"{number}! is {Person.Factorial(number)}");
 } catch (Exception ex) {
   WriteLine($"{ex.GetType()} says: {ex.Message} number was {number}");  
+}
+
+WriteLine($"");
+
+Passenger[] passengers = {
+  new FirstClassPassenger { AirMiles = 1_419, Name = "Suman" },
+  new FirstClassPassenger { AirMiles = 16_562, Name = "Lucy" },
+  new BusinessClassPassenger { Name = "Janice" },
+  new CoachClassPassenger { CarryOnKg = 25.7, Name = "Dave" },
+  new CoachClassPassenger { CarryOnKg = 0, Name = "Amit" }
+};
+
+foreach(Passenger passenger in passengers){
+  decimal flightCost = passenger switch{
+    FirstClassPassenger p when p.AirMiles > 3500  => 1500M,
+    FirstClassPassenger p when p.AirMiles > 1500  => 1750M,
+    FirstClassPassenger _                         => 2000M,
+    BusinessClassPassenger _                      => 1000M,
+    CoachClassPassenger p when p.CarryOnKg < 10.0 => 500M,
+    CoachClassPassenger _                         => 650M,
+    _                                             => 800M
+  };
+  WriteLine($"Flight costs {flightCost:C} for {passenger}");
 }
