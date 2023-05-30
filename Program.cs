@@ -225,3 +225,12 @@ for (int i = 0; i < lamech.Children.Count; i++){
     arg2: lamech[i].Name
   );
 }
+
+
+int number = 5;
+
+try{
+  Write($"{number}! is {Person.Factorial(number)}");
+} catch (Exception ex) {
+  WriteLine($"{ex.GetType()} says: {ex.Message} number was {number}");  
+}
